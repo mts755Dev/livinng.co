@@ -1,0 +1,70 @@
+.dots {
+  position: absolute;
+  bottom: 10px;
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+  gap: 0;
+}
+
+.dots li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.dots li i {
+  font-size: 16px;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.dots .dots li i:hover,
+.dots li i:focus {
+  outline: none;
+}
+
+.dots li i:hover:before,
+.dots li i:focus:before {
+  opacity: 1;
+  color: #fff;
+}
+
+.dots li i:before {
+  width: 20px;
+  height: 20px;
+  opacity: .5;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dots li.slick-active i:before {
+  opacity: 1;
+  color: #fff;
+}
+
+.slick-slider button {
+  visibility: hidden;
+  transition: all 250ms ease-in;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.slick-slider:hover button {
+  visibility: visible;
+}
